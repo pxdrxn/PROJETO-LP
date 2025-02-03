@@ -115,6 +115,26 @@ h4 {
     cursor: pointer;
     background: linear-gradient(90deg, rgba(80, 107, 180, 1) 0%, rgba(0, 120, 255, 1) 100%);
     z-index: 2;
+    
+}
+
+.buy img {
+    width: 30px;
+    display: none;
+}
+
+.buy:hover {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 160px;
+    transition: all 0.5 ease;
+}
+
+.buy:hover img {
+    display: block;
+    transition: all 0.5 ease;
 }
 
 .column-2 {
@@ -126,6 +146,7 @@ h4 {
 .controller {
     width: 90%;
     z-index: 2;
+    animation: moveController 2s infinite alternate;
 }
 
 .box {
@@ -198,7 +219,7 @@ h4 {
         top: 60px;
         left: 60px;
         overflow: hidden;
-        transition: 0.5s ease;
+        transition: all 1s ease;
     }
 
     .menu-icon {
@@ -208,5 +229,11 @@ h4 {
     .nav-list {
         display: block;
         margin-top: 5px;
+    }
+}
+
+@keyframes moveController{
+    from{
+        transform: translate(-5%, -5%) rotate(-5deg);
     }
 }
